@@ -4,6 +4,28 @@
   <meta charset="UTF-8">
   <title>Vspo 明信片收藏封面</title>
   <style>
+
+    #discordBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 36px;       /* 按鈕大小 */
+    height: 36px;
+    z-index: 1000;
+    }
+
+    #discordBtn img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  /* 圓形圖示 */
+    transition: transform 0.2s;
+    }
+
+    #discordBtn:hover img {
+    transform: scale(1.1);  /* 滑鼠 hover 放大 */
+    }
+
+
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -108,6 +130,10 @@
   </style>
 </head>
 <body>
+    <a id="discordBtn" href="https://discord.com/users/sharki0627" target="_blank" title="Contact">
+        <img src="images/discord-icon.png" alt="Discord" />
+    </a>
+
     <img src="images/logo.png" alt="Vspo Logo" class="logo">
     <h1>VSPO Postcard Collection</h1>
 
