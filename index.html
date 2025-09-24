@@ -137,6 +137,9 @@
     <img src="images/logo.png" alt="Vspo Logo" class="logo">
     <h1>VSPO Postcard Collection</h1>
 
+    <h2>Overview</h2>
+    <div id="overview" class="overview-grid" style="margin-bottom:20px;"></div>
+
     <div class="grid">
         <!-- 成員 1 花芽 すみれ 👾💤 -->
         <div class="member-card">
@@ -445,5 +448,285 @@
         </div>
 
     </div>
+
+    <script>
+        const overviewDiv = document.getElementById('overview');
+        
+        // 所有成員資料
+        const members = [
+
+        //花芽 すみれ 👾💤
+        { name: 'sumire_1', img: 'images/1_sumire/1_sumire_Gver.jpeg' },
+        { name: 'sumire_2', img: 'images/1_sumire/2_sumire_2021BD.jpeg' },
+        { name: 'sumire_3', img: 'images/1_sumire/3_sumire_3rd.jpeg' },
+        { name: 'sumire_4', img: 'images/1_sumire/4_sumire2022BD.jpg' },
+        { name: 'sumire_5', img: 'images/1_sumire/5_sumire_4th.png' },
+        { name: 'sumire_6', img: 'images/1_sumire/6_sumire2023BD.jpg' },
+        { name: 'sumire_7', img: 'images/1_sumire/7_sumire_5th.jpg' },
+        { name: 'sumire_8', img: 'images/1_sumire/8_sumire2024BD.jpg' },
+        { name: 'sumire_9', img: 'images/1_sumire/9_sumire_6th.jpg' },
+        { name: 'sumire_10', img: 'images/1_sumire/10_sumire2025BD.jpg' },
+
+        //花芽 なずな 🍣
+        { name: 'nazuna_1', img: 'images/2_nazuna/1_nazuna_seisover.jpg' },
+        { name: 'nazuna_2', img: 'images/2_nazuna/2_nazuna2021BD.png' },
+        { name: 'nazuna_3', img: 'images/2_nazuna/3_nazuna_3rd.jpeg' },
+        { name: 'nazuna_4', img: 'images/2_nazuna/4_nazuna2022BD.jpg' },
+        { name: 'nazuna_5', img: 'images/2_nazuna/5_nazuna_4th.png' },
+        { name: 'nazuna_6', img: 'images/2_nazuna/6_nazuna2023BD.png' },
+        { name: 'nazuna_7', img: 'images/2_nazuna/7_nazuna_5th.png' },
+        { name: 'nazuna_8', img: 'images/2_nazuna/8_nazuna2024BD.png' },
+        { name: 'nazuna_9', img: 'images/2_nazuna/9_nazuna_6th.png' },
+        { name: 'nazuna_10', img: 'images/2_nazuna/10_nazuna2025BD.png' },
+
+        //小雀 とと 🐤
+        { name: 'toto_1', img: 'images/3_toto/1_小雀とと誕生日記念2020.jpeg' },
+        { name: 'toto_2', img: 'images/3_toto/2_小雀とと_1周年記念.png' },
+        { name: 'toto_3', img: 'images/3_toto/3_小雀とと誕生日記念2021.jpeg' },
+        { name: 'toto_4', img: 'images/3_toto/4_小雀とと_2周年記念.jpeg' },
+        { name: 'toto_5', img: 'images/3_toto/5_小雀とと誕生日記念2022.png' },
+        { name: 'toto_6', img: 'images/3_toto/6_小雀とと_3周年記念.jpeg' },
+        { name: 'toto_7', img: 'images/3_toto/7_小雀とと誕生日記念2023.png' },
+        { name: 'toto_8', img: 'images/3_toto/8_小雀とと_4周年記念.jpg' },
+        { name: 'toto_9', img: 'images/3_toto/9_小雀とと誕生日記念2024.png' },
+        { name: 'toto_10', img: 'images/3_toto/10_小雀とと_5周年記念.png' },
+        { name: 'toto_11', img: 'images/3_toto/11_小雀とと_6周年記念.png' },
+
+        //一ノ瀬 うるは 🌠
+        { name: 'uruha_1', img: 'images/4_uruha/1_一ノ瀬うるは誕生日記念2020.jpeg' },
+        { name: 'uruha_2', img: 'images/4_uruha/2_一ノ瀬うるはValentine.jpeg' },
+        { name: 'uruha_3', img: 'images/4_uruha/3_一ノ瀬うるは誕生日記念2021.jpeg' },
+        { name: 'uruha_4', img: 'images/4_uruha/4_一ノ瀬うるは_2周年記念.jpeg' },
+        { name: 'uruha_5', img: 'images/4_uruha/5_一ノ瀬うるは誕生日記念2022.png' },
+        { name: 'uruha_6', img: 'images/4_uruha/6_一ノ瀬うるは_3周年記念.jpg' },
+        { name: 'uruha_7', img: 'images/4_uruha/7_一ノ瀬うるは誕生日記念2023.png' },
+        { name: 'uruha_8', img: 'images/4_uruha/8_一ノ瀬うるは_4周年記念.webp' },
+        { name: 'uruha_9', img: 'images/4_uruha/9_一ノ瀬うるは誕生日記念2024.png' },
+        { name: 'uruha_10', img: 'images/4_uruha/10_一ノ瀬うるは_5周年記念.webp' },
+        { name: 'uruha_11', img: 'images/4_uruha/11_一ノ瀬うるは_6周年記念.webp' },
+
+        //胡桃 のあ 🧸♔
+        { name: 'noah_1', img: 'images/5_noah/1_胡桃のあ誕生日記念2021.jpeg' },
+        { name: 'noah_2', img: 'images/5_noah/2_胡桃のあ誕生日記念2022.jpeg' },
+        { name: 'noah_3', img: 'images/5_noah/3_胡桃のあ963記念日2022.png' },
+        { name: 'noah_4', img: 'images/5_noah/4_胡桃のあ誕生日記念2023.jpg' },
+        { name: 'noah_5', img: 'images/5_noah/5_胡桃のあ胡桃の日記念2023.png' },
+        { name: 'noah_6', img: 'images/5_noah/6_胡桃のあ誕生日記念2024.png' },
+        { name: 'noah_7', img: 'images/5_noah/7_胡桃のあ胡桃の日記念2024.png' },
+        { name: 'noah_8', img: 'images/5_noah/8_胡桃のあ誕生日記念2025.png' },
+
+        //兎咲 ミミ 🐰
+        { name: 'mimi_1', img: 'images/6_mimi/1_兎咲ミミ誕生日記念2021.png' },
+        { name: 'mimi_2', img: 'images/6_mimi/2_兎咲ミミ_1周年記念.jpeg' },
+        { name: 'mimi_3', img: 'images/6_mimi/3_兎咲ミミ誕生日記念2022.jpeg' },
+        { name: 'mimi_4', img: 'images/6_mimi/4_兎咲ミミ_2周年記念.jpeg' },
+        { name: 'mimi_5', img: 'images/6_mimi/5_兎咲ミミ誕生日記念2023.png' },
+        { name: 'mimi_6', img: 'images/6_mimi/6_兎咲ミミ_3周年記念.jpg' },
+        { name: 'mimi_7', img: 'images/6_mimi/7_兎咲ミミ誕生日記念2024.png' },
+        { name: 'mimi_8', img: 'images/6_mimi/8_兎咲ミミ_4周年記念.png' },
+        { name: 'mimi_9', img: 'images/6_mimi/9_兎咲ミミ誕生日記念2025.png' },
+        { name: 'mimi_10', img: 'images/6_mimi/10_兎咲ミミ_5周年記念.jpeg' },
+
+        //空澄 セナ 🗝♤
+        { name: 'sena_1', img: 'images/7_sena/1_空澄セナ誕生日記念2021.jpeg' },
+        { name: 'sena_2', img: 'images/7_sena/2_空澄セナ_1周年記念.jpeg' },
+        { name: 'sena_3', img: 'images/7_sena/3_空澄セナ誕生日記念2022.jpeg' },
+        { name: 'sena_4', img: 'images/7_sena/4_空澄セナ_2周年記念.jpeg' },
+        { name: 'sena_5', img: 'images/7_sena/5_空澄セナ誕生日記念2023.png' },
+        { name: 'sena_6', img: 'images/7_sena/6_空澄セナ_3周年記念.jpg' },
+        { name: 'sena_7', img: 'images/7_sena/7_空澄セナ誕生日記念2024.png' },
+        { name: 'sena_8', img: 'images/7_sena/8_空澄セナ_4周年記念.jpg' },
+        { name: 'sena_9', img: 'images/7_sena/9_空澄セナ誕生日記念2025.png' },
+        { name: 'sena_10', img: 'images/7_sena/10_空澄セナ_5周年記念.jpeg' },
+
+        //胡桃 橘 ひなの 🍫💘(🔪❤️)
+        { name: 'hinano_1', img: 'images/8_hinano/1_橘ひなの誕生日記念2020.jpeg' },
+        { name: 'hinano_2', img: 'images/8_hinano/2_橘ひなの誕生日記念2021.jpeg' },
+        { name: 'hinano_3', img: 'images/8_hinano/3_橘ひなの_1周年記念.png' },
+        { name: 'hinano_4', img: 'images/8_hinano/4_橘ひなの誕生日記念2022.png' },
+        { name: 'hinano_5', img: 'images/8_hinano/5_橘ひなの_2周年記念.jpeg' },
+        { name: 'hinano_6', img: 'images/8_hinano/6_橘ひなの誕生日記念2023.webp' },
+        { name: 'hinano_7', img: 'images/8_hinano/7_橘ひなの_3周年記念.jpg' },
+        { name: 'hinano_8', img: 'images/8_hinano/8_橘ひなの誕生日記念2024.png' },
+        { name: 'hinano_9', img: 'images/8_hinano/9_橘ひなの_4周年記念.webp' },
+        { name: 'hinano_10', img: 'images/8_hinano/10_橘ひなの_5周年記念.jpeg' },
+
+        //英 リサ 💐
+        { name: 'lisa_1', img: 'images/9_lisa/1_英リサ誕生日記念2021.jpeg' },
+        { name: 'lisa_2', img: 'images/9_lisa/2_英リサ_1周年記念.jpeg' },
+        { name: 'lisa_3', img: 'images/9_lisa/3_英リサ誕生日記念2022.jpg' },
+        { name: 'lisa_4', img: 'images/9_lisa/4_英リサ_2周年記念.jpeg' },
+        { name: 'lisa_5', img: 'images/9_lisa/5_英リサ誕生日記念2023.webp' },
+        { name: 'lisa_6', img: 'images/9_lisa/6_英リサ_3周年記念.jpg' },
+        { name: 'lisa_7', img: 'images/9_lisa/7_英リサ誕生日記念2024.png' },
+        { name: 'lisa_8', img: 'images/9_lisa/8_英リサ_4周年記念.webp' },
+
+        //如月 れん ⏰
+        { name: 'ren_1', img: 'images/10_ren/1_如月れん誕生日記念2021.jpeg' },
+        { name: 'ren_2', img: 'images/10_ren/2_如月れん_1周年記念.jpeg' },
+        { name: 'ren_3', img: 'images/10_ren/3_如月れん誕生日記念2022.jpeg' },
+        { name: 'ren_4', img: 'images/10_ren/4_如月れん_2周年記念.png' },
+        { name: 'ren_5', img: 'images/10_ren/5_如月れん誕生日記念2023.jpg' },
+        { name: 'ren_6', img: 'images/10_ren/6_如月れん_3周年記念.webp' },
+        { name: 'ren_7', img: 'images/10_ren/7_如月れん誕生日記念2024.png' },
+        { name: 'ren_8', img: 'images/10_ren/8_如月れん_4周年記念.webp' },
+        { name: 'ren_9', img: 'images/10_ren/9_如月れん誕生日記念2025.png' },
+
+        //神成 きゅぴ 🌩
+        { name: 'qpi_1', img: 'images/11_qpi/1_qpi_2021BD.jpeg' },
+        { name: 'qpi_2', img: 'images/11_qpi/2_qpi_1st.jpg' },
+        { name: 'qpi_3', img: 'images/11_qpi/3_qpi_2022BD.jpeg' },
+        { name: 'qpi_4', img: 'images/11_qpi/4_qpi_2nd.png' },
+        { name: 'qpi_5', img: 'images/11_qpi/5_qpi_2023BD.jpg' },
+        { name: 'qpi_6', img: 'images/11_qpi/6_qpi_2024BD.png' },
+        { name: 'qpi_7', img: 'images/11_qpi/7_qpi_3rd.png' },
+        { name: 'qpi_8', img: 'images/11_qpi/8_qpi_2025BD.webp' },
+        { name: 'qpi_9', img: 'images/11_qpi/9_qpi_4th.png' },
+
+        //八雲 べに 💄💚
+        { name: 'beni_1', img: 'images/12_beni/1_beni_2021BD.jpeg' },
+        { name: 'beni_2', img: 'images/12_beni/2_beni_2022BD.jpeg' },
+        { name: 'beni_3', img: 'images/12_beni/3_beni_1st.jpeg' },
+        { name: 'beni_4', img: 'images/12_beni/4_beni_2023BD.jpg' },
+        { name: 'beni_5', img: 'images/12_beni/5_beni_2nd.jpg' },
+        { name: 'beni_6', img: 'images/12_beni/6_beni_2024BD.png' },
+        { name: 'beni_7', img: 'images/12_beni/7_beni_3rd.png' },
+        { name: 'beni_8', img: 'images/12_beni/8_beni_4th.png' },
+        { name: 'beni_9', img: 'images/12_beni/9_beni_2025BD.jpeg' },
+
+        //藍沢 エマ 🥞💫
+        { name: 'ema_1', img: 'images/13_ema/1_藍沢エマ誕生日記念2022.jpeg' },
+        { name: 'ema_2', img: 'images/13_ema/2_藍沢エマ_1周年記念.jpeg' },
+        { name: 'ema_3', img: 'images/13_ema/3_藍沢エマ誕生日記念2023.png' },
+        { name: 'ema_4', img: 'images/13_ema/4_藍沢エマ_2周年記念.jpg' },
+        { name: 'ema_5', img: 'images/13_ema/5_藍沢エマ誕生日記念2024.png' },
+        { name: 'ema_6', img: 'images/13_ema/6_藍沢エマ_3周年記念.png' },
+        { name: 'ema_7', img: 'images/13_ema/7_藍沢エマ誕生日記念2025.png' },
+        { name: 'ema_8', img: 'images/13_ema/8_藍沢エマ_4周年記念.jpeg' },
+
+        //紫宮 るな ☪️🐾👻
+        { name: 'runa_1', img: 'images/14_runa/1_紫宮るな誕生日記念2022.jpeg' },
+        { name: 'runa_2', img: 'images/14_runa/2_紫宮るな_1周年記念.jpeg' },
+        { name: 'runa_3', img: 'images/14_runa/3_紫宮るな誕生日記念2023.png' },
+        { name: 'runa_4', img: 'images/14_runa/4_紫宮るな_2周年記念.jpg' },
+        { name: 'runa_5', img: 'images/14_runa/5_紫宮るな誕生日記念2024.png' },
+        { name: 'runa_6', img: 'images/14_runa/6_紫宮るな_3周年記念.png' },
+        { name: 'runa_7', img: 'images/14_runa/7_紫宮るな誕生日記念2025.png' },
+        { name: 'runa_8', img: 'images/14_runa/8_runa_4th.jpeg' },
+
+        //猫汰 つな 🍒✨
+        { name: 'tsuna_1', img: 'images/15_tsuna/1_猫汰つな誕生日記念2022.png' },
+        { name: 'tsuna_2', img: 'images/15_tsuna/2_猫汰つな誕生日記念2023.png' },
+        { name: 'tsuna_3', img: 'images/15_tsuna/3_猫汰つな_1周年記念.jpg' },
+        { name: 'tsuna_4', img: 'images/15_tsuna/4_猫汰つな誕生日記念2024.png' },
+        { name: 'tsuna_5', img: 'images/15_tsuna/5_猫汰つな_2周年記念.png' },
+        { name: 'tsuna_6', img: 'images/15_tsuna/6_猫汰つな_3周年記念.jpeg' },
+
+        //白波 らむね 🐻‍❄️🏖
+        { name: 'ramune_1', img: 'images/16_ramune/1_白波らむね誕生日記念2023.png' },
+        { name: 'ramune_2', img: 'images/16_ramune/2_白波らむね_1周年記念.jpg' },
+        { name: 'ramune_3', img: 'images/16_ramune/3_白波らむね誕生日記念2024.png' },
+        { name: 'ramune_4', img: 'images/16_ramune/4_白波らむね_2周年記念.jpg' },
+        { name: 'ramune_5', img: 'images/16_ramune/5_白波らむね誕生日記念2025.png' },
+        { name: 'ramune_6', img: 'images/16_ramune/6_白波らむね_3周年記念.jpeg' },
+
+        //小森 めと 🪐
+        { name: 'met_1', img: 'images/17_met/1_小森めと_1周年記念.jpeg' },
+        { name: 'met_2', img: 'images/17_met/2_小森めと誕生日記念2022.jpeg' },
+        { name: 'met_3', img: 'images/17_met/3_小森めと_2周年記念.jpeg' },
+        { name: 'met_4', img: 'images/17_met/4_小森めと誕生日記念2023.png' },
+        { name: 'met_5', img: 'images/17_met/5_小森めと_3周年記念.webp' },
+        { name: 'met_6', img: 'images/17_met/6_小森めと誕生日記念2024.png' },
+        { name: 'met_7', img: 'images/17_met/7_小森めと_4周年記念.png' },
+        { name: 'met_8', img: 'images/17_met/8_小森めと_5周年記念.png' },
+
+        //夢野 あかり 🍼
+        { name: 'akari_1', img: 'images/18_akari/1_夢野あかり_1周年記念.jpg' },
+        { name: 'akari_2', img: 'images/18_akari/2_夢野あかり_あかりの日記念.png' },
+        { name: 'akari_3', img: 'images/18_akari/3_夢野あかり_2周年記念.jpeg' },
+
+        //夜乃 くろむ 💀⛓️
+        { name: 'kuromu_1', img: 'images/19_kuromu/1_夜乃くろむ誕生日記念2024.png' },
+        { name: 'kuromu_2', img: 'images/19_kuromu/2_夜乃くろむ_1周年記念.png' },
+        { name: 'kuromu_3', img: 'images/19_kuromu/3_夜乃くろむ誕生日記念2025.webp' },
+
+        //紡木 こかげ 📘💧
+        { name: 'kokage_1', img: 'images/20_kokage/1_kokage_2024BD.jpg' },
+        { name: 'kokage_2', img: 'images/20_kokage/2_kokage_1st.png' },
+
+        //千燈 ゆうひ 🫠
+        { name: 'yuuhi_1', img: 'images/21_yuuhi/1_千燈ゆうひ誕生日記念2024.png' },
+        { name: 'yuuhi_2', img: 'images/21_yuuhi/2_千燈ゆうひ_1周年記念.png' },
+
+        //Remia Aotsuki 🔋🔭
+        { name: 'remia_1', img: 'images/22_Remia_Aotsuki/1_Remia誕生日記念2025.jpeg' },
+        { name: 'remia_2', img: 'images/22_Remia_Aotsuki/2_Remia_1周年記念.jpeg' },
+
+        //Arya Kuroha ♦️🔪
+        { name: 'arya_1', img: 'images/23_Arya_Kuroha/1_Arya誕生日記念2024.jpeg' },
+        { name: 'arya_2', img: 'images/23_Arya_Kuroha/2_Arya誕生日記念2025.jpeg' },
+        { name: 'arya_3', img: 'images/23_Arya_Kuroha/3_Arya_1周年記念.jpeg' },
+
+        //Jira Jisaki ⛰️
+        { name: 'jira_1', img: 'images/24_Jira_Jisaki/1_Jira誕生日記念2024.png' },
+        { name: 'jira_2', img: 'images/24_Jira_Jisaki/2_Jira_1周年記念.jpeg' },
+
+        //Narin Mikure 🌃🌷
+        { name: 'narin_1', img: 'images/25_Narin_Mikure/1_Narin誕生日記念2024.jpeg' },
+        { name: 'narin_2', img: 'images/25_Narin_Mikure/2_Narin_1周年記念.jpeg' },
+
+        //Riko Solari 👩‍🚀💜
+        { name: 'riko_1', img: 'images/26_Riko_Solari/1_Riko誕生日記念2024.jpeg' },
+        { name: 'riko_2', img: 'images/26_Riko_Solari/2_Riko_1周年記念.jpeg' },
+
+        //蝶屋 はなび 🦋🎆
+        { name: 'hanabi_1', img: 'images/31_hanabi/1_hanabi_2025BD.png' },
+
+        //甘結 もか 🕹🔖
+        { name: 'moka_1', img: 'images/32_moka/1_甘結もか誕生日記念2025.png' },
+
+        
+
+
+
+
+
+          // 依序把所有成員加進來...
+        ];
+        
+        // 建立 Overview 縮圖
+        members.forEach(member => {
+          const img = document.createElement('img');
+          img.src = member.img;
+          img.alt = member.name;
+          img.style.width = '80px';
+          img.style.height = '80px';
+          img.style.objectFit = 'cover';
+          img.style.margin = '5px';
+          img.style.filter = localStorage.getItem(member.name) === 'owned' ? 'brightness(100%)' : 'brightness(50%)';
+          img.style.cursor = 'pointer';
+        
+          // 點擊切換亮暗並存 localStorage
+          img.addEventListener('click', () => {
+            if (img.style.filter === 'brightness(50%)') {
+              img.style.filter = 'brightness(100%)';
+              localStorage.setItem(member.name, 'owned');
+            } else {
+              img.style.filter = 'brightness(50%)';
+              localStorage.setItem(member.name, 'not-owned');
+            }
+          });
+        
+          overviewDiv.appendChild(img);
+        });
+        </script>
+        
+        <style>
+        .overview-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        </style>
 </body>
 </html>
