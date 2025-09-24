@@ -280,7 +280,7 @@
 
     // 載入狀態
     function loadState() {
-        const saved = localStorage.getItem("cards-sumire");
+        const saved = localStorage.getItem("cards-nazuna");
         if (!saved) return;
         const state = JSON.parse(saved);
         document.querySelectorAll(".card").forEach(card => {
@@ -297,7 +297,7 @@
 
     // 清除狀態
     function resetState() {
-        localStorage.removeItem("vspoCards");
+        localStorage.removeItem("cards-nazuna");
         document.querySelectorAll(".card").forEach(card => {
             card.querySelectorAll(".checkbox").forEach(cb => cb.checked = false);
             updateCardBrightness(card);

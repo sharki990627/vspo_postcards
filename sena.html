@@ -288,7 +288,7 @@
 
     // 清除狀態
     function resetState() {
-        localStorage.removeItem("vspoCards");
+        localStorage.removeItem("cards-sena");
         document.querySelectorAll(".card").forEach(card => {
             card.querySelectorAll(".checkbox").forEach(cb => cb.checked = false);
             updateCardBrightness(card);
