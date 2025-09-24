@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Vspo 明信片收藏封面</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f9;
+      text-align: center; /* 全部內容置中 */
+    }
+
+    .logo {
+      max-width: 120px; /* 控制 logo 大小 */
+      display: block;
+      margin: 0 auto 10px; /* 水平置中 & 與標題的距離 */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .member-card-cn {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .member-card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid #ddd;
+    }
+
+    .member-card-cn img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid #ddd;
+    }
+
+    .member-card h2 {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .member-card-cn h2 {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .info {
+      font-size: 14px;
+      margin: 2px 0;
+      color: #555;
+    }
+
+    .member-card button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .member-card-cn button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ff0000;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .member-card button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+    <img src="images/logo.png" alt="Vspo Logo" class="logo">
+    <h1>VSPO Postcard Collection</h1>
+
+    <div class="grid">
+        <!-- 成員 1 花芽 すみれ 👾💤 -->
+        <div class="member-card">
+            <img src="images/members/JP_1_sumire.webp" alt="花芽すみれ">
+            <h2>花芽 すみれ 👾💤</h2>
+            <div class="info">🎂 誕生日：4月2日</div>
+            <div class="info">🎉 周年紀念：2018年10月20日</div>
+            <button onclick="window.location.href='sumire.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 2 花芽 なずな 🍣 -->
+        <div class="member-card">
+            <img src="images/members/JP_2_nazuna.webp" alt="花芽 なずな">
+            <h2>花芽 なずな 🍣</h2>
+            <div class="info">🎂 誕生日：4月2日</div>
+            <div class="info">🎉 周年紀念：2018年10月20日</div>
+            <button onclick="window.location.href='nazuna.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 3 小雀 とと 🐤 -->
+        <div class="member-card">
+            <img src="images/members/JP_3_toto.webp" alt="小雀 とと">
+            <h2>小雀 とと 🐤</h2>
+            <div class="info">🎂 誕生日：10月10日</div>
+            <div class="info">🎉 周年紀念：2019年4月18日</div>
+            <button onclick="window.location.href='toto.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 4 一ノ瀬 うるは 🌠 -->
+        <div class="member-card">
+            <img src="images/members/JP_4_uruha.webp" alt="一ノ瀬 うるは">
+            <h2>一ノ瀬 うるは 🌠</h2>
+            <div class="info">🎂 誕生日：12月23日</div>
+            <div class="info">🎉 周年紀念：2019年4月22日</div>
+            <button onclick="window.location.href='uruha.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 5 胡桃 のあ 🧸♔ -->
+        <div class="member-card">
+            <img src="images/members/JP_5_noah.webp" alt="胡桃 のあ">
+            <h2>胡桃 のあ 🧸♔</h2>
+            <div class="info">🎂 誕生日：2月13日</div>
+            <div class="info">🎉 周年紀念：2020年3月14日</div>
+            <div class="info">🎉 963日紀念：11月2日</div>
+            <button onclick="window.location.href='noah.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 6 兎咲 ミミ 🐰 -->
+        <div class="member-card">
+            <img src="images/members/JP_6_mimi.webp" alt="兎咲 ミミ">
+            <h2>兎咲 ミミ 🐰</h2>
+            <div class="info">🎂 誕生日：3月3日</div>
+            <div class="info">🎉 周年紀念：2020年7月4日</div>
+            <button onclick="window.location.href='mimi.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 7 空澄 セナ 🗝♤ -->
+        <div class="member-card">
+            <img src="images/members/JP_7_sena.webp" alt="空澄 セナ">
+            <h2>空澄 セナ 🗝♤</h2>
+            <div class="info">🎂 誕生日：1月18日</div>
+            <div class="info">🎉 周年紀念：2020年7月19日</div>
+            <button onclick="window.location.href='sena.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 8 橘 ひなの 🍫💘(🔪❤️) -->
+        <div class="member-card">
+            <img src="images/members/JP_8_hinano.webp" alt="橘 ひなの">
+            <h2>橘 ひなの 🍫💘(🔪❤️)</h2>
+            <div class="info">🎂 誕生日：11月11日</div>
+            <div class="info">🎉 周年紀念：2020年8月14日</div>
+            <button onclick="window.location.href='hinano.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 9 英 リサ 💐 -->
+        <div class="member-card">
+            <img src="images/members/JP_9_lisa.webp" alt="英 リサ">
+            <h2>英 リサ 💐</h2>
+            <div class="info">🎂 誕生日：6月3日</div>
+            <div class="info">🎉 周年紀念：2020年8月15日</div>
+            <button onclick="window.location.href='lisa.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 10 如月 れん ⏰ -->
+        <div class="member-card">
+            <img src="images/members/JP_10_ren.webp" alt="如月 れん">
+            <h2>如月 れん ⏰</h2>
+            <div class="info">🎂 誕生日：5月5日</div>
+            <div class="info">🎉 周年紀念：2020年10月18日</div>
+            <button onclick="window.location.href='ren.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 11 神成 きゅぴ 🌩 -->
+        <div class="member-card">
+            <img src="images/members/JP_11_qpi.webp" alt="神成 きゅぴ">
+            <h2>神成 きゅぴ 🌩</h2>
+            <div class="info">🎂 誕生日：5月18日</div>
+            <div class="info">🎉 初配信日：2020年7月10日 (VTuberとしての初配信)</div>
+            <div class="info">🎉 周年紀念：2021年1月9日 (ぶいすぽ所属としての初配信)</div>
+            <button onclick="window.location.href='qpi.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 12 八雲 べに 💄💚 -->
+        <div class="member-card">
+            <img src="images/members/JP_12_beni.webp" alt="八雲 べに">
+            <h2>八雲 べに 💄💚</h2>
+            <div class="info">🎂 誕生日：9月25日</div>
+            <div class="info">🎉 周年紀念：2021年4月16日</div>
+            <button onclick="window.location.href='beni.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 13 藍沢 エマ 🥞💫 -->
+        <div class="member-card">
+            <img src="images/members/JP_13_ema.webp" alt="藍沢 エマ">
+            <h2>藍沢 エマ 🥞💫</h2>
+            <div class="info">🎂 誕生日：1月31日</div>
+            <div class="info">🎉 周年紀念：2021年9月18日</div>
+            <button onclick="window.location.href='ema.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 14 紫宮 るな ☪️🐾👻 -->
+        <div class="member-card">
+            <img src="images/members/JP_14_runa.webp" alt="紫宮 るな">
+            <h2>紫宮 るな ☪️🐾👻</h2>
+            <div class="info">🎂 誕生日：2月22日</div>
+            <div class="info">🎉 周年紀念：2021年9月26日</div>
+            <button onclick="window.location.href='runa.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 15 猫汰 つな 🍒✨ -->
+        <div class="member-card">
+            <img src="images/members/JP_15_tsuna.webp" alt="猫汰 つな">
+            <h2>猫汰 つな 🍒✨</h2>
+            <div class="info">🎂 誕生日：11月27日</div>
+            <div class="info">🎉 周年紀念：2022年6月24日</div>
+            <button onclick="window.location.href='tsuna.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 16 白波 らむね 🐻‍❄️🏖 -->
+        <div class="member-card">
+            <img src="images/members/JP_16_ramune.webp" alt="白波 らむね">
+            <h2>白波 らむね 🐻‍❄️🏖</h2>
+            <div class="info">🎂 誕生日：3月21日</div>
+            <div class="info">🎉 周年紀念：2022年8月25日</div>
+            <button onclick="window.location.href='ramune.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 17 小森 めと 🪐 -->
+        <div class="member-card">
+            <img src="images/members/JP_17_met.webp" alt="小森 めと">
+            <h2>小森 めと 🪐</h2>
+            <div class="info">🎂 誕生日：12月10日</div>
+            <div class="info">🎉 初配信日：2020年5月30日(小森めととして)</div>
+            <div class="info">🎉 周年紀念：2023年2月1日(ぶいすぽ移籍後)</div>
+            <button onclick="window.location.href='met.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 18 夢野 あかり 🍼 -->
+        <div class="member-card">
+            <img src="images/members/JP_18_akari.webp" alt="夢野 あかり">
+            <h2>夢野 あかり 🍼</h2>
+            <div class="info">🎂 誕生日：5月5日</div>
+            <div class="info">🎉 周年紀念：2023年6月21日(ぶいすぽ所属後初配信)</div>
+            <div class="info">🎉 あかりの日記念：10月21日</div>
+            <button onclick="window.location.href='akari.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 19 夜乃 くろむ 💀⛓️ -->
+        <div class="member-card">
+            <img src="images/members/JP_19_kuromu.webp" alt="夜乃 くろむ">
+            <h2>夜乃 くろむ 💀⛓️</h2>
+            <div class="info">🎂 誕生日：6月16日</div>
+            <div class="info">🎉 周年紀念：2023年11月24日</div>
+            <button onclick="window.location.href='kuromu.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 20 紡木 こかげ 📘💧 -->
+        <div class="member-card">
+            <img src="images/members/JP_20_kokage.webp" alt="紡木 こかげ">
+            <h2>紡木 こかげ 📘💧</h2>
+            <div class="info">🎂 誕生日：10月26日</div>
+            <div class="info">🎉 周年紀念：2024年3月19日</div>
+            <button onclick="window.location.href='kokage.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 21 千燈 ゆうひ 🫠 -->
+        <div class="member-card">
+            <img src="images/members/JP_21_yuuhi.webp" alt="千燈 ゆうひ">
+            <h2>千燈 ゆうひ 🫠</h2>
+            <div class="info">🎂 誕生日：12月3日</div>
+            <div class="info">🎉 周年紀念：2024年5月2日</div>
+            <button onclick="window.location.href='yuuhi.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 22 Remia Aotsuki -->
+        <div class="member-card">
+            <img src="images/members/EN_1_Remia.webp" alt="Remia Aotsuki">
+            <h2>Remia Aotsuki 🔋🔭</h2>
+            <div class="info">🎂 誕生日：2月3日</div>
+            <div class="info">🎉 周年紀念：2024年6月30日</div>
+            <button onclick="window.location.href='Remia.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 23 Arya Kuroha ♦️🔪 -->
+        <div class="member-card">
+            <img src="images/members/EN_2_Arya.webp" alt="Arya Kuroha">
+            <h2>Arya Kuroha ♦️🔪</h2>
+            <div class="info">🎂 誕生日：9月22日</div>
+            <div class="info">🎉 周年紀念：2024年6月30日</div>
+            <button onclick="window.location.href='arya.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 24 Jira Jisaki ⛰️ -->
+        <div class="member-card">
+            <img src="images/members/EN_3_Jira.webp" alt="Jira Jisaki">
+            <h2>Jira Jisaki ⛰️</h2>
+            <div class="info">🎂 誕生日：11月4日</div>
+            <div class="info">🎉 周年紀念：2024年6月30日</div>
+            <button onclick="window.location.href='jira.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 25 Narin Mikure 🌃🌷 -->
+        <div class="member-card">
+            <img src="images/members/EN_4_Narin.webp" alt="Narin Mikure">
+            <h2>Narin Mikure 🌃🌷</h2>
+            <div class="info">🎂 誕生日：12月9日</div>
+            <div class="info">🎉 周年紀念：2024年8月25日</div>
+            <button onclick="window.location.href='narin.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 26 Riko Solari 👩‍🚀💜 -->
+        <div class="member-card">
+            <img src="images/members/EN_5_Riko.webp" alt="Riko Solari">
+            <h2>Riko Solari 👩‍🚀💜</h2>
+            <div class="info">🎂 誕生日：3月24日</div>
+            <div class="info">🎉 周年紀念：2024年8月25日</div>
+            <button onclick="window.location.href='riko.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 27 小针彩 -->
+        <div class="member-card-cn">
+            <img src="images/members/CN_1_Kohari.webp" alt="小针彩">
+            <h2>小针彩 </h2>
+            <div class="info">🎂 誕生日：4月14日</div>
+            <div class="info">🎉 周年紀念：2024年8月28日</div>
+            <button onclick="">維修中</button>
+            <!-- <button onclick="window.location.href='kohari.html'">前往專頁</button> -->
+        </div>
+
+        <!-- 成員 28 白咲　露理 -->
+        <div class="member-card-cn">
+            <img src="images/members/CN_2_Shirasaki.webp" alt="白咲　露理">
+            <h2>白咲　露理 </h2>
+            <div class="info">🎂 誕生日：12月6日</div>
+            <div class="info">🎉 周年紀念：2024年8月29日</div>
+            <button onclick="">維修中</button>
+            <!-- <button onclick="window.location.href='shirasaki.html'">前往專頁</button> -->
+        </div>
+
+        <!-- 成員 29 帕妃 -->
+        <div class="member-card-cn">
+            <img src="images/members/CN_3_Pafi.webp" alt="帕妃">
+            <h2>帕妃 </h2>
+            <div class="info">🎂 誕生日：5月5日</div>
+            <div class="info">🎉 周年紀念：2024年8月30日</div>
+            <button onclick="">維修中</button>
+            <!-- <button onclick="window.location.href='pafi.html'">前往專頁</button> -->
+        </div>
+
+        <!-- 成員 30 千郁郁 -->
+        <div class="member-card-cn">
+            <img src="images/members/CN_4_Sen.webp" alt="千郁郁">
+            <h2>千郁郁 </h2>
+            <div class="info">🎂 誕生日：9月20日</div>
+            <div class="info">🎉 周年紀念：2024年8月31日</div>
+            <button onclick="">維修中</button>
+            <!-- <button onclick="window.location.href='sen.html'">前往專頁</button> -->
+        </div>
+
+        <!-- 成員 31 蝶屋 はなび 🦋🎆 -->
+        <div class="member-card">
+            <img src="images/members/JP_22_hanabi.webp" alt="蝶屋 はなび">
+            <h2>蝶屋 はなび 🦋🎆</h2>
+            <div class="info">🎂 誕生日：4月9日</div>
+            <div class="info">🎉 周年紀念：2024年11月2日</div>
+            <button onclick="window.location.href='hanabi.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 32 甘結 もか 🕹🔖 -->
+        <div class="member-card">
+            <img src="images/members/JP_23_moka.webp" alt="甘結 もか">
+            <h2>甘結 もか 🕹🔖</h2>
+            <div class="info">🎂 誕生日：2月26日</div>
+            <div class="info">🎉 周年紀念：2024年11月2日</div>
+            <button onclick="window.location.href='moka.html'">前往專頁</button>
+        </div>
+
+        <!-- 成員 33 日向晴 -->
+        <div class="member-card-cn">
+            <img src="images/members/CN_5_Haru.webp" alt="日向晴">
+            <h2>日向晴 </h2>
+            <div class="info">🎂 誕生日：11月19日</div>
+            <div class="info">🎉 周年紀念：2025年4月7日</div>
+            <button onclick="">維修中</button>
+            <!-- <button onclick="window.location.href='haru.html'">前往專頁</button> -->
+        </div>
+
+    </div>
+</body>
+</html>

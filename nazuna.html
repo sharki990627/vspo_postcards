@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Vspo Postcard Collection</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f9;
+        text-align: center; /* 全部內容置中 */
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* Grid 容器，每列三格 */
+    .grid {
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr; /* 第一格年份，其餘兩格卡片 */
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .year-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .card {
+        background: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .card img {
+        width: 150px;
+        height: auto;
+        filter: brightness(40%);
+        transition: 0.3s;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .card-name {
+        margin: 4px 0;
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+        color: #555;
+        background-color: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .checkbox-group {
+        margin-top: 5px;
+    }
+
+    .card button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 5px;
+    }
+
+    .card button:hover {
+        background-color: #45a049;
+    }
+
+    /* 清除按鈕 */
+    #resetBtn {
+        display: block;
+        margin: 20px auto;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        background-color: #d9534f;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #resetBtn:hover {
+        background-color: #c9302c;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>花芽 なずな</h1>
+
+    <div class="grid">
+        <!-- 第1列2020年份 -->
+        <div class="year-cell">2020</div>
+        <!-- 第一列卡片 -->
+        <div class="card" data-id="Card1" style="grid-column: span 2;">
+            <img src="images/2_花芽なずな/1_直筆ポストカード 〜花芽なずな清楚 ver.〜.jpg" alt="直筆ポストカード 〜花芽なずな🍣 清楚 ver.〜">
+            <div class="card-name">直筆ポストカード 〜花芽なずな🍣 清楚 ver.〜</div>
+            <div class="card-date">2020-06-14</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>
+        </div>
+        <button onclick="window.open('https://x.com/Vspo77/status/1272122025981562882', '_blank')">Go to Website</button>
+        </div>
+
+
+        <!-- 第2列2021年份 -->
+        <div class="year-cell">2021</div>
+        <!-- 第一列卡片 -->
+        <div class="card" data-id="Card2">
+            <img src="images/2_花芽なずな/2_花芽なずな2021BD.png" alt="花芽なずな誕生日記念2021">
+            <div class="card-name">花芽なずな 2021誕生日〜</div>
+            <div class="card-date">2021-04-02</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>        </div>
+        <button onclick="window.open('https://x.com/Vspo77/status/1376869083719725061', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card3">
+            <img src="images/2_花芽なずな/3_花芽なずな_3周年記念.jpeg" alt="花芽なずな3周年記念">
+            <div class="card-name">花芽なずな 3周年記念〜</div>
+            <div class="card-date">2021-10-19</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>
+        </div>
+        <button onclick="window.open('https://x.com/Vspo77/status/1450039189915901952', '_blank')">Go to Website</button>
+        </div>
+
+        <!-- 第3列2022年份 -->
+        <div class="year-cell">2022</div>
+        <div class="card" data-id="Card4">
+            <img src="images/2_花芽なずな/4_花芽なずな誕生日記念グッズ2022.jpg" alt="花芽なずな誕生日記念2022">
+            <div class="card-name">花芽なずな 2022誕生日〜</div>
+            <div class="card-date">2022-04-02</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/3765477', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card5">
+            <img src="images/2_花芽なずな/5_花芽なずな_4周年記念.png" alt="花芽なずな4周年記念">
+            <div class="card-name">花芽なずな 4周年記念〜</div>
+            <div class="card-date">2022-10-20</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/4254668', '_blank')">Go to Website</button>
+        </div>
+
+        <!-- 第4列2023年份 -->
+        <div class="year-cell">2023</div>
+        <div class="card" data-id="Card6">
+            <img src="images/2_花芽なずな/6_花芽なずな誕生日記念グッズ2023.png" alt="花芽なずな誕生日記念2023">
+            <div class="card-name">花芽なずな 2023誕生日〜</div>
+            <div class="card-date">2023-04-02</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label> 
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/4655583', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card7">
+            <img src="images/2_花芽なずな/7_花芽なずな_5周年記念.png" alt="花芽なずな5周年記念">
+            <div class="card-name">花芽なずな 5周年記念〜</div>
+            <div class="card-date">2023-10-20</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/5167858', '_blank')">Go to Website</button>
+        </div>
+
+
+        <!-- 第5列2024年份 -->
+        <div class="year-cell">2024</div>
+        <div class="card" data-id="Card8">
+            <img src="images/2_花芽なずな/8_花芽なずな誕生日記念グッズ2024.png" alt="花芽なずな誕生日記念2024">
+            <div class="card-name">花芽なずな 2024誕生日〜</div>
+            <div class="card-date">2024-04-02</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label> 
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('hhttps://lupinusvg.booth.pm/items/5614608', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card9">
+            <img src="images/2_花芽なずな/9_花芽なずな_6周年記念.png" alt="花芽なずな6周年記念">
+            <div class="card-name">花芽なずな 6周年記念〜</div>
+            <div class="card-date">2024-10-20</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label> 
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/6197650', '_blank')">Go to Website</button>
+        </div>
+
+        <!-- 第6列2025年份 -->
+        <div class="year-cell">2025</div>
+        <div class="card" data-id="Card9" style="grid-column: span 2;">
+            <img src="images/2_花芽なずな/10_花芽なずな誕生日記念グッズ2025.png" alt="花芽なずな誕生日記念2025">
+            <div class="card-name">花芽なずな 2025誕生日〜</div>
+            <div class="card-date">2025-04-02</div> <!-- 新增日期格子 -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label> 
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/6743313', '_blank')">Go to Website</button>
+        </div>
+
+        <!-- <div class="card" data-id="Card10">
+            <img src="images/1_花芽すみれ/" alt="花芽なずな7周年記念">
+            <div class="card-name">花芽なずな 7周年記念〜</div>
+            <div class="card-date">2025-10-21</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label> 
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('', '_blank')">Go to Website</button>
+        </div> -->
+
+    </div>
+
+
+
+
+    
+
+    <button id="resetBtn">清除全部紀錄</button>
+
+    <script>
+    // 更新亮暗
+    function updateCardBrightness(card) {
+        const checkboxes = card.querySelectorAll(".checkbox");
+        const img = card.querySelector("img");
+        let hasChecked = false;
+        checkboxes.forEach(cb => { if(cb.checked) hasChecked = true; });
+        img.style.filter = hasChecked ? "brightness(100%)" : "brightness(40%)";
+    }
+
+    // 儲存到 localStorage
+    function saveState() {
+        const state = {};
+        document.querySelectorAll(".card").forEach(card => {
+            const cardId = card.getAttribute("data-id");
+            state[cardId] = {};
+            card.querySelectorAll(".checkbox").forEach(cb => {
+            const type = cb.getAttribute("data-type");
+            state[cardId][type] = cb.checked;
+            });
+        });
+        localStorage.setItem("cards-nazuna", JSON.stringify(state));
+    }
+
+    // 載入狀態
+    function loadState() {
+        const saved = localStorage.getItem("cards-sumire");
+        if (!saved) return;
+        const state = JSON.parse(saved);
+        document.querySelectorAll(".card").forEach(card => {
+            const cardId = card.getAttribute("data-id");
+            if(state[cardId]){
+            card.querySelectorAll(".checkbox").forEach(cb => {
+                const type = cb.getAttribute("data-type");
+                cb.checked = !!state[cardId][type];
+            });
+            updateCardBrightness(card);
+            }
+        });
+    }
+
+    // 清除狀態
+    function resetState() {
+        localStorage.removeItem("vspoCards");
+        document.querySelectorAll(".card").forEach(card => {
+            card.querySelectorAll(".checkbox").forEach(cb => cb.checked = false);
+            updateCardBrightness(card);
+        });
+    }
+
+    // 綁定 checkbox 事件
+    document.querySelectorAll(".card").forEach(card => {
+        card.querySelectorAll(".checkbox").forEach(cb => {
+            cb.addEventListener("change", () => {
+            updateCardBrightness(card);
+            saveState();
+            });
+        });
+    });
+
+    // 清除按鈕事件
+    document.getElementById("resetBtn").addEventListener("click", resetState);
+
+    // 頁面載入恢復狀態
+    window.addEventListener("load", loadState);
+    </script>
+</body>
+</html>

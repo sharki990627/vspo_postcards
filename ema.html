@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Vspo Postcard Collection</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f9;
+        text-align: center; /* 全部內容置中 */
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* Grid 容器，每列三格 */
+    .grid {
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr; /* 第一格年份，其餘兩格卡片 */
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .year-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .card {
+        background: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .card img {
+        width: 150px;
+        height: auto;
+        filter: brightness(40%);
+        transition: 0.3s;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .card-name {
+        margin: 4px 0;
+        font-size: 14px;
+    }
+
+    .card-date {
+        font-size: 12px;
+        color: #555;
+        background-color: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .checkbox-group {
+        margin-top: 5px;
+    }
+
+    .card button {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 5px;
+    }
+
+    .card button:hover {
+        background-color: #45a049;
+    }
+
+    /* 清除按鈕 */
+    #resetBtn {
+        display: block;
+        margin: 20px auto;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        background-color: #d9534f;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #resetBtn:hover {
+        background-color: #c9302c;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>藍沢 エマ</h1>
+
+    <div class="grid">
+        <!-- 第1列2022年份 -->
+        <div class="year-cell">2022</div>
+        <!-- 第一列卡片 -->
+        <div class="card" data-id="Card1" >
+            <img src="images/13_藍沢エマ/1_藍沢エマ誕生日記念2022.jpeg" alt="藍沢エマ誕生日記念2022">
+            <div class="card-name">藍沢エマ 2022誕生日〜</div>
+            <div class="card-date">2022-2-1</div>
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>   
+        </div>
+        <button onclick="window.open('https://x.com/Vspo77/status/1488121107685478400', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card2">
+            <img src="images/13_藍沢エマ/2_藍沢エマ_1周年記念.jpeg" alt="藍沢エマ1周年記念">
+            <div class="card-name">藍沢エマ 1周年記念〜</div>
+            <div class="card-date">2022-9-18</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>     
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label> 
+        </div>
+        <button onclick="window.open('https://x.com/Vspo77/status/1571091627246260227', '_blank')">Go to Website</button>
+        </div>
+
+
+
+        <!-- 第2列2023年份 -->
+        <div class="year-cell">2023</div>
+        <div class="card" data-id="Card3">
+            <img src="images/13_藍沢エマ/3_藍沢エマ誕生日記念2023.png" alt="藍沢エマ誕生日記念2023">
+            <div class="card-name">藍沢エマ 2023誕生日〜</div>
+            <div class="card-date">2023-1-31</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>     
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>   
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/4503252', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card4">
+            <img src="images/13_藍沢エマ/4_藍沢エマ_2周年記念.jpg" alt="藍沢エマ2周年記念">
+            <div class="card-name">藍沢エマ 2周年記念〜</div>
+            <div class="card-date">2023-9-18</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label>     
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label> 
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/5057979', '_blank')">Go to Website</button>
+        </div>
+
+        <!-- 第3列2024年份 -->
+        <div class="year-cell">2024</div>
+        <div class="card" data-id="Card5" >
+            <img src="images/13_藍沢エマ/5_藍沢エマ誕生日記念2024.png" alt="藍沢エマ誕生日記念2024">
+            <div class="card-name">藍沢エマ 2024誕生日〜</div>
+            <div class="card-date">2024-1-31</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 親簽</label>
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/5452358', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card6">
+            <img src="images/13_藍沢エマ/6_藍沢エマ_3周年記念.png" alt="藍沢エマ3周年記念">
+            <div class="card-name">藍沢エマ 3周年記念〜</div>
+            <div class="card-date">2024-9-18</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 親簽</label>
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/6105962', '_blank')">Go to Website</button>
+        </div>
+
+        <!-- 第4列2025年份 -->
+        <div class="year-cell">2025</div>
+        <div class="card" data-id="Card7">
+            <img src="images/13_藍沢エマ/7_藍沢エマ誕生日記念2025.png" alt="藍沢エマ誕生日記念2025">
+            <div class="card-name">藍沢エマ 2025誕生日〜</div>
+            <div class="card-date">2024-1-31</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽</label> 
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://lupinusvg.booth.pm/items/6536362', '_blank')">Go to Website</button>
+        </div>
+
+        <div class="card" data-id="Card8">
+            <img src="images/13_藍沢エマ/8_藍沢エマ_4周年記念.jpeg" alt="藍沢エマ4周年記念">
+            <div class="card-name">藍沢エマ 4周年記念〜</div>
+            <div class="card-date">2024-9-18</div> 
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="checkbox" data-type="signed"> 親簽抽選</label> 
+            <label><input type="checkbox" class="checkbox" data-type="replica"> 複製簽</label>
+        </div>
+        <button onclick="window.open('https://x.com/Vspo77/status/1968253599403950329/', '_blank')">Go to Website</button>
+        </div>
+
+
+    </div>
+
+
+
+
+    
+
+    <button id="resetBtn">清除全部紀錄</button>
+
+    <script>
+    // 更新亮暗
+    function updateCardBrightness(card) {
+        const checkboxes = card.querySelectorAll(".checkbox");
+        const img = card.querySelector("img");
+        let hasChecked = false;
+        checkboxes.forEach(cb => { if(cb.checked) hasChecked = true; });
+        img.style.filter = hasChecked ? "brightness(100%)" : "brightness(40%)";
+    }
+
+    // 儲存到 localStorage
+    function saveState() {
+        const state = {};
+        document.querySelectorAll(".card").forEach(card => {
+            const cardId = card.getAttribute("data-id");
+            state[cardId] = {};
+            card.querySelectorAll(".checkbox").forEach(cb => {
+            const type = cb.getAttribute("data-type");
+            state[cardId][type] = cb.checked;
+            });
+        });
+        localStorage.setItem("cards-ema", JSON.stringify(state));
+    }
+
+    // 載入狀態
+    function loadState() {
+        const saved = localStorage.getItem("cards-ema");
+        if (!saved) return;
+        const state = JSON.parse(saved);
+        document.querySelectorAll(".card").forEach(card => {
+            const cardId = card.getAttribute("data-id");
+            if(state[cardId]){
+            card.querySelectorAll(".checkbox").forEach(cb => {
+                const type = cb.getAttribute("data-type");
+                cb.checked = !!state[cardId][type];
+            });
+            updateCardBrightness(card);
+            }
+        });
+    }
+
+    // 清除狀態
+    function resetState() {
+        localStorage.removeItem("vspoCards");
+        document.querySelectorAll(".card").forEach(card => {
+            card.querySelectorAll(".checkbox").forEach(cb => cb.checked = false);
+            updateCardBrightness(card);
+        });
+    }
+
+    // 綁定 checkbox 事件
+    document.querySelectorAll(".card").forEach(card => {
+        card.querySelectorAll(".checkbox").forEach(cb => {
+            cb.addEventListener("change", () => {
+            updateCardBrightness(card);
+            saveState();
+            });
+        });
+    });
+
+    // 清除按鈕事件
+    document.getElementById("resetBtn").addEventListener("click", resetState);
+
+    // 頁面載入恢復狀態
+    window.addEventListener("load", loadState);
+    </script>
+</body>
+</html>
